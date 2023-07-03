@@ -4,7 +4,7 @@ Enable/disable game objects based on time and/or date of the VRChat Servers
 
 ## How To
 
-Check [the guide][guide-path]
+Check [the guide](guide-path)
 
 [guide-path]: ./GUIDE.md
 

@@ -4,7 +4,7 @@ Enable/disable game objects based on time and/or date of the VRChat Servers
 
 ## How To
 
-Check [the guide](guide-path)
+Check [the guide](guide-path) (GUIDE.md)
 
 [guide-path]: ./GUIDE.md
 
@@ -27,3 +27,4 @@ Exclusive = the number is *only* between 0 and 15, but not those values
 ## License
 
 You can change stuff, BUT you have to credit my name in your world somewhere or I'll do some nasty stuff >:)
+(Also with "credit my name" I mean putting this image [n1ghtthef0x.png] somewhere in the world, username is optional)

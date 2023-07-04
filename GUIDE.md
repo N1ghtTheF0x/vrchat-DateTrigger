@@ -1,7 +1,7 @@
 # DateTrigger Usage Guide
 
-1. drag script `DateTrigger.cs` to object (NOT ON TARGET OBJECT!!!)
-2. set object target
+1. Add component `Date Trigger` to object (NOT ON TARGET OBJECT!!!) or drop the prefab `DateTriggerHolder` to the scene
+2. set target object
 3. for each enabled option
     - set `To`
     - set `From`

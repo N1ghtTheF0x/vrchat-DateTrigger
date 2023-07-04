@@ -1,6 +1,6 @@
 # DateTrigger Usage Guide
 
-1. add script to object (NOT ON TARGET OBJECT!!!)
+1. drag script `DateTrigger.cs` to object (NOT ON TARGET OBJECT!!!)
 2. set object target
 3. for each enabled option
     - set `To`

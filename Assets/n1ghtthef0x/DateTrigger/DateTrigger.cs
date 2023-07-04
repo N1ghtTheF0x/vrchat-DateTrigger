@@ -232,9 +232,9 @@ public class DateTriggerEditor : Editor
             EditorGUILayout.LabelField(new GUIContent("Target", "The GameObject to modify. This shouldn't be the same object of this component!"));
             targetObj = (GameObject)EditorGUILayout.ObjectField(dateTrigger.targetObj, typeof(GameObject), true);
             EditorGUILayout.EndHorizontal();
+            if (targetObj == null) EditorGUILayout.HelpBox("This field should be an GameObject!", MessageType.Error);
             if (targetObj == dateTrigger.gameObject) EditorGUILayout.HelpBox("Can't be the object with the component! This will break this script!", MessageType.Error);
             hourOffset = EditorGUILayout.IntField(new GUIContent("Hour Offset", "Add hours to the check"), dateTrigger.hour_offset);
-
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
 

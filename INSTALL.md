@@ -6,10 +6,12 @@
 
 ## Install using CreatorCompanion
 
-Add `https://n1ghtthef0x.github.io/vrchat-repo/index.json` as a Repository and enable it
+Add https://n1ghtthef0x.github.io/vrchat-repo/index.json as a Repository and enable it  
+You can also just visit [this][cc-link] website to add it quickly
 
 ## After Installation
 
 Check [the guide][guide-path] (GUIDE.md)
 
 [guide-path]: ./Assets/n1ghtthef0x/DateTrigger/GUIDE.md
+[cc-link]: https://n1ghtthef0x.github.io/vrchat-repo/

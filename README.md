@@ -1,3 +1,5 @@
+**VPM PACKAGES ARE CURRENTLY BROKEN. USE 1.1.1 UNITYPACKAGE FOR NOW UNTIL THE PROBLEMS HAVE BEEN SOLVED!**
+
 # DateTrigger
 
 Enable/disable game objects based on time and/or date of the VRChat Servers

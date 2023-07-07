@@ -1,1 +1,1 @@
-If you think there should be a useful feature, then just do a pr and I will look into it
+If you think there should be a useful feature, then just do a pr and I will look into it (ANYTHING ABOUT VPM REPOSITORY IS AN INSTANT DENY)

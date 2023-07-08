@@ -55,11 +55,37 @@ namespace NTF.DateTrigger
             int MAX = Math.Max(max, min);
             return value >= MIN && value <= MAX;
         }
+        public static bool Inclusive(int value, WeekDay min, WeekDay max)
+        {
+            int MIN = Math.Min((byte)min, (byte)max);
+            int MAX = Math.Max((byte)max, (byte)min);
+            return value >= MIN && value <= MAX;
+        }
         public static bool Exclusive(int value, int min, int max)
         {
             int MIN = Math.Min(min, max);
             int MAX = Math.Max(max, min);
             return value > MIN && value < MAX;
+        }
+        public static bool Exclusive(int value, WeekDay min, WeekDay max)
+        {
+            int MIN = Math.Min((byte)min, (byte)max);
+            int MAX = Math.Max((byte)max, (byte)min);
+            return value > MIN && value < MAX;
+        }
+        public static WeekDay Convert(DayOfWeek day)
+        {
+            switch (day)
+            {
+                case DayOfWeek.Monday: return WeekDay.Monday;
+                case DayOfWeek.Tuesday: return WeekDay.Tuesday;
+                case DayOfWeek.Wednesday: return WeekDay.Wednesday;
+                case DayOfWeek.Thursday: return WeekDay.Thursday;
+                case DayOfWeek.Friday: return WeekDay.Friday;
+                case DayOfWeek.Saturday: return WeekDay.Saturday;
+                case DayOfWeek.Sunday: return WeekDay.Sunday;
+                default: return WeekDay.Invalid;
+            }
         }
     }
 }

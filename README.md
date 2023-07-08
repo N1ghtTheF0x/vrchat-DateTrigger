@@ -1,6 +1,6 @@
 # DateTrigger
 
-Enable/disable game objects based on time and/or date of the VRChat Servers
+Animate game objects based on time and/or date of the VRChat Servers
 
 See [this][install-path] for installation
 

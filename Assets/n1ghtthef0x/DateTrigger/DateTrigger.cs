@@ -12,21 +12,16 @@ using System;
 public class DateTrigger : UdonSharpBehaviour
 {
     // SETTINGS
-    [Header("Settings")]
+    public bool settingsEnabled = true;
     // Settings Properties
     public int hourOffset = 0;
     public CheckType checkType = CheckType.Inclusive;
     public bool onStart = true;
     public bool onUpdate = true;
-    // TARGETS
-    [Header("GameObject Settings")]
-    public GameObject targetGameobject = null;
-    [Header("Animator Settings")]
     public Animator targetAnimator = null;
-    public string enabledState = "DTON";
-    public string disabledState = "DTOFF";
+    public string targetParameter = "DateTrigger";
     // RANGE
-    [Header("Range")]
+    public bool rangeEnabled = true;
     // Day Properties
     public bool enableDay = false;
     public int fromDay = -1;
@@ -57,7 +52,8 @@ public class DateTrigger : UdonSharpBehaviour
     public int toSecond = -1;
     // Internal Properties
     private bool lastTimeActive = true;
-    private string currentState = string.Empty;
+    public bool curActive = true;
+    private bool firstTime = false;
     private void Start()
     {
         if (onStart) Check();
@@ -69,12 +65,14 @@ public class DateTrigger : UdonSharpBehaviour
     private bool Check(int value,int min, int max)
     {
         if (min == max) return value == min;
-        return checkType == CheckType.Inclusive ? Utils.Inclusive(value,min,max) : Utils.Exclusive(value,min,max);
+        bool result = checkType == CheckType.Inclusive ? Utils.Inclusive(value,min,max) : Utils.Exclusive(value,min,max);
+        if(enableWeek) Debug.Log(result);
+        return result;
     }
     private void Check()
     {
         DateTime curDate = Networking.GetNetworkDateTime().AddHours(hourOffset);
-        bool curActive = true;
+        curActive = true;
 
         if(enableDay) curActive = Check(curDate.Day,fromDay,toDay);
         if(enableWeek) curActive = Check(Utils.GetWeekDayAsInt(curDate.DayOfWeek),(int)fromWeek,(int)toWeek);
@@ -84,32 +82,15 @@ public class DateTrigger : UdonSharpBehaviour
         if(enableMinute) curActive = Check(curDate.Minute,fromMinute,toMinute);
         if(enableSecond) curActive = Check(curDate.Second,fromSecond,toSecond);
 
-        if(curActive != lastTimeActive) 
-        {   
-            if(targetGameobject != null) targetGameobject.SetActive(curActive);
-            if(targetAnimator != null)
+        if(curActive != lastTimeActive || !firstTime) 
+        {
+            firstTime = true;
+            if (targetAnimator != null)
             {
-                string state = curActive ? enabledState : disabledState;
-                if(state != string.Empty && currentState != state)
-                {
-                    if (IsAnimatorPlaying()) targetAnimator.StopPlayback();
-                    targetAnimator.Play(state);
-                    currentState = state;
-                }
+                targetAnimator.SetBool(targetParameter, curActive);
+                Debug.Log("Animator \"" + targetAnimator.name + "\" has been set to " + curActive);
             }
         }
         lastTimeActive = curActive;
-    }
-    private bool IsAnimatorPlaying()
-    {
-        if(targetAnimator == null) return false;
-
-        for(int i = 0;i < targetAnimator.layerCount;i++)
-        {
-            var info = targetAnimator.GetCurrentAnimatorStateInfo(i);
-            if (info.normalizedTime != 0) return true;
-        }
-
-        return false;
     }
 }

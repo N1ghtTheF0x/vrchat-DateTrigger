@@ -21,7 +21,7 @@
     "vpmDependencies": {
         "com.vrchat.udonsharp": "^1.1.8"
     },
-    "url": "https://github.com/N1ghtTheF0x/vrchat-DateTrigger/releases/latest/DateTrigger.zip?",
+    "url": "https://github.com/N1ghtTheF0x/vrchat-DateTrigger/releases/tag/1.4.0/DateTrigger.zip?",
     "legacyFolders": {
         "n1ghtthef0x/DateTrigger": ""
     },

@@ -5,6 +5,9 @@
         "VRC.SDK3.Editor",
         "VRC.SDKBase",
         "VRC.SDKBase.Editor",
+        "UdonSharp.Lib",
+        "UdonSharp.Runtime",
+        "UdonSharp.Editor",
         "NTF.VRChat.DateTrigger"
     ],
     "includePlatforms": [],

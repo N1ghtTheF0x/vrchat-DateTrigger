@@ -2,7 +2,9 @@
     "name": "NTF.VRChat.DateTrigger",
     "references": [
         "VRC.SDK3",
-        "VRC.SDKBase"
+        "VRC.SDKBase",
+        "UdonSharp.Lib",
+        "UdonSharp.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: DateTrigger
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 5fee6e7435dda68439e764724672df31,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 98c99aaca06500d4898bd602d4173e0a,
     type: 2}
   udonAssembly: 
   assemblyError: 
@@ -170,7 +170,7 @@ MonoBehaviour:
       Data: 9|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: NTF.DateTrigger.CheckType, Assembly-CSharp
+      Data: NTF.DateTrigger.CheckType, NTF.VRChat.DateTrigger
     - Name: 
       Entry: 8
       Data: 
@@ -668,7 +668,7 @@ MonoBehaviour:
       Data: 32|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: NTF.DateTrigger.WeekDay, Assembly-CSharp
+      Data: NTF.DateTrigger.WeekDay, NTF.VRChat.DateTrigger
     - Name: 
       Entry: 8
       Data: 

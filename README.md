@@ -2,15 +2,11 @@
 
 Animate game objects based on time and/or date of the VRChat Servers
 
-See [this][install-path] for installation
+Add my [VPM Repository][vpm-url] to install it
 
 ## Showcase
 
 You can visit [this][world-link] to check it out in action
-
-## Why is this a .unitypackage?
-
-Because f**k VPM Package, unitypackage is my friend
 
 ## How To
 
@@ -20,7 +16,7 @@ Check [the guide][guide-path] (GUIDE.md)
 
 DateTrigger is licensed under `NTF`, see [here][license-path] for more information
 
-[install-path]: ./INSTALL.md
+[vpm-url]: https://n1ghtthef0x.github.io/vrchat-repo/
 [guide-path]: ./GUIDE.md
 [license-path]: ./LICENSE
 [world-link]: https://vrchat.com/home/launch?worldId=wrld_f842fa97-4907-43ff-8633-626beee5f92e

@@ -1,0 +1,22 @@
+{
+    "name": "NTF.VRChat.DateTrigger.Editor",
+    "references": [
+        "VRC.SDK3",
+        "VRC.SDK3.Editor",
+        "VRC.SDKBase",
+        "VRC.SDKBase.Editor",
+        "UdonSharp.Lib",
+        "UdonSharp.Runtime",
+        "UdonSharp.Editor",
+        "NTF.VRChat.DateTrigger"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

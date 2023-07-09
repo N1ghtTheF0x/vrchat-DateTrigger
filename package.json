@@ -1,0 +1,29 @@
+{
+    "name": "ntf.vrchat.datetrigger",
+    "version": "1.4.0",
+    "description": "Animate game objects based on time and/or date of the VRChat Servers",
+    "displayName": "DateTrigger",
+    "unity": "2019.4",
+    "author": {
+        "name": "N1ghtTheF0x",
+        "email": "N1ghtTheF0x@proton.me",
+        "url": "https://github.com/N1ghtTheF0x"
+    },
+    "dependencies": {},
+    "keywords": ["vrchat","udonsharp","udon","date","time","csharp"],
+    "samples": [
+        {
+            "displayName": "Example Scene",
+            "description": "Contains basic usage of DateTrigger. Public World is available for demonstration.",
+            "path": "Samples~/Example"
+        }
+    ],
+    "vpmDependencies": {
+        "com.vrchat.udonsharp": "^1.1.8"
+    },
+    "url": "https://github.com/N1ghtTheF0x/vrchat-DateTrigger/releases/tag/1.4.0/DateTrigger.zip?",
+    "legacyFolders": {
+        "n1ghtthef0x/DateTrigger": ""
+    },
+    "legacyFiles": {}
+}

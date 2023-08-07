@@ -10,6 +10,7 @@ public class DateTriggerEditor : Editor
     // SETTINGS
     private bool settingsEnabled = true;
     // Settings Properties
+    private DateUpdater updater = null;
     private int hourOffset = 0;
     private CheckType checkType = CheckType.Inclusive;
     private bool onStart = true;
@@ -76,6 +77,7 @@ public class DateTriggerEditor : Editor
 
         if (settingsEnabled)
         {
+            updater = (DateUpdater)EditorGUILayout.ObjectField(new GUIContent("Updater","The component that keeps up with the current date/time"), dateTrigger.updater,typeof(DateUpdater), true);
             hourOffset = EditorGUILayout.IntField(new GUIContent("Hour Offset", "Add Hours to the check for timezones or something like that"), dateTrigger.hourOffset);
             checkType = (CheckType)EditorGUILayout.EnumPopup(new GUIContent("Internal Check type", "Whenever you want Inclusive or Exclusive checking"), dateTrigger.checkType);
             EditorGUILayout.BeginHorizontal();
@@ -157,6 +159,7 @@ public class DateTriggerEditor : Editor
     {
         dateTrigger.settingsEnabled = settingsEnabled;
 
+        dateTrigger.updater = updater;
         dateTrigger.hourOffset = hourOffset;
         dateTrigger.checkType = checkType;
         dateTrigger.onStart = onStart;

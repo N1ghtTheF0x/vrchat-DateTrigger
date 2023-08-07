@@ -14,6 +14,7 @@ public class DateTrigger : UdonSharpBehaviour
     // SETTINGS
     public bool settingsEnabled = true;
     // Settings Properties
+    public DateUpdater updater = null;
     public int hourOffset = 0;
     public CheckType checkType = CheckType.Inclusive;
     public bool onStart = true;
@@ -69,7 +70,7 @@ public class DateTrigger : UdonSharpBehaviour
     }
     private void Check()
     {
-        DateTime curDate = Networking.GetNetworkDateTime().AddHours(hourOffset);
+        DateTime curDate = updater.dateTime.AddHours(hourOffset);
         curActive = true;
 
         if (enableDay) curActive = Check(curDate.Day,fromDay,toDay);
@@ -83,12 +84,13 @@ public class DateTrigger : UdonSharpBehaviour
         if(curActive != lastTimeActive || !firstTime) 
         {
             firstTime = true;
-            if (targetAnimator != null)
-            {
-                targetAnimator.SetBool(targetParameter, curActive);
-                Debug.Log("\"" + targetAnimator.name + "\" has been set to " + curActive);
-            }
+            if (targetAnimator != null) SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "OnDateTrigger");
         }
         lastTimeActive = curActive;
+    }
+    public void OnDateTrigger()
+    {
+        targetAnimator.SetBool(targetParameter, curActive);
+        Debug.Log("\"" + targetAnimator.name + "\" has been set to " + curActive);
     }
 }

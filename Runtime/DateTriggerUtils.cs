@@ -18,6 +18,11 @@ namespace NTF.DateTrigger
         Inclusive,
         Exclusive
     }
+    public enum DateTimeMethod
+    {
+        Networking,
+        System
+    }
     public static class Utils
     {
 
